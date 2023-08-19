@@ -9,7 +9,8 @@ class busqueda:
         self.GN.append(ng)
     def ver_nodos(self):
         for i in range (len(self.GN)):
-            print((i+1),".-",self.GN[i])
+            print((i+1),".-",self.GN[i]) 
+            
 def menu ():
     op=1
     grafos=busqueda()
