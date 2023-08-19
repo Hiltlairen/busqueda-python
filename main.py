@@ -1,19 +1,12 @@
 #listas
 G=[]
 #recordandO PYTHON
-class busqueda:
-    def __init__(self):
-        self.GN=[]
-    def crando(self):
-        ng=str(input("nombre del nodo:"))
-        self.GN.append(ng)
-    def ver_nodos(self):
-        for i in range (len(self.GN)):
-            print((i+1),".-",self.GN[i]) 
+#importando 
+from grafos import grafos_c
             
 def menu ():
     op=1
-    grafos=busqueda()
+    grafos=grafos_c()
     while(op!=9):
         print("MENU")
         print("1.- Añadir los grafos")
