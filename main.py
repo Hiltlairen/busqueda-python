@@ -1,21 +1,30 @@
-#listas
-G=[]
-#recordandO PYTHON
-#importando 
-from grafos import grafos_c
-            
-def menu ():
-    op=1
-    grafos=grafos_c()
-    while(op!=9):
-        print("MENU")
-        print("1.- Añadir los grafos")
-        print("2.- Ver grafos")
-        print("9.- Salir")
-        op=int(input(":"))
-        if op==1:
-            grafos.crando()
-        elif op==2:
-            grafos.ver_nodos()
+from grafos import Grafo
 
-menu()
+def mostrar_menu():
+    print("1. Crear nodo")
+    print("2. Enlazar nodos")
+    print("3. Mostrar grafo")
+    print("4. Salir")
+
+mi_grafo = Grafo()
+
+while True:
+    mostrar_menu()
+    opcion = input("Seleccione una opción: ")
+
+    if opcion == '1':
+        nodo = input("Ingrese el nombre del nodo: ")
+        mi_grafo.agregar_nodo(nodo)
+        print("Nodo", nodo, "creado.")
+    elif opcion == '2':
+        nodo1 = input("Ingrese el nombre del primer nodo: ")
+        nodo2 = input("Ingrese el nombre del segundo nodo: ")
+        mi_grafo.agregar_arista(nodo1, nodo2)
+        print("Enlace creado entre", nodo1, "y", nodo2)
+    elif opcion == '3':
+        mi_grafo.mostrar_grafo()
+    elif opcion == '4':
+        print("Saliendo del programa.")
+        break
+    else:
+        print("Opción no válida. Por favor, seleccione una opción válida.")
